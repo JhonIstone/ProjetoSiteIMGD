@@ -1,0 +1,210 @@
+/*BODY*/
+body{
+    background: url("./backgorund/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 115%;
+}
+
+/*HEADER*/
+header p, h1{
+    text-align: center;
+}
+
+#logo{
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+
+.title{
+    color: #EEE8AA;
+    
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    
+    font-family: 'Londrina Solid', cursive;
+    font-size: 50px;
+}
+
+/*BUTTONS AND LINKS*/
+a{
+    text-decoration: none;
+}
+
+.button.new{
+    color: #D8BFD8;
+    font-size: 1.5rem;
+
+    position: relative;
+    
+    margin-top: 0;
+    margin-left: 15%;
+}
+
+button{
+    margin-top: 1.5rem;
+
+    font-size: 1.5rem;
+
+    width: 200px;
+    height: 50px;
+}
+
+.button.cancel{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-right: 15%;
+    
+    color: red;
+    opacity: 0.5;
+
+    border: 1px solid red;
+    border-radius: 0.25rem;
+}
+
+.button.submit{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: green;
+    opacity: 0.5;
+
+    border: 1px solid green;
+    border-radius: 0.25rem;
+}
+
+.button.cancel:hover, .button.submit:hover{
+    opacity: 1;
+}
+
+/*MAIN*/
+#musics{
+    text-align: center;
+}
+
+.card{
+    background: lightgrey;
+    border-radius: 5px;
+
+    padding: 1rem;
+    margin: 10px 5px 10px 5px;
+
+    width: 250px;
+    height: 500px;
+
+    display: inline-block;
+    vertical-align: top;
+
+    text-align: center;
+}
+
+.card .music_title , p{
+    text-align: center;
+}
+
+.card .music_title{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.card .subtitle{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card p{
+    margin-top: 0;
+    font-size: 95%;
+    
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.card img{
+    width: 85%;
+    height: 40%;
+}
+
+/*MODAL*/
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    background-color: #DCDCDC;
+    padding: 2.4rem;
+    
+    width: 500px;
+    height: 400px;
+
+    border-radius: 00.5rem;
+
+    position: relative;
+    z-index: 1;
+}
+
+.form h2{
+    margin-top: 0;
+
+    text-align: center;
+
+    font-size: 2rem;
+}
+
+.form label{
+    text-align: left;
+}
+
+input{
+    border: 1px solid;
+    border-radius: 0.2rem;
+
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+
+    padding: 0.8rem;
+
+    width: 90%;
+}
+
+textarea{
+    border: 1px solid;
+    border-radius: 0.2rem;
+
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+
+    width: 500px;
+    height: 50px;
+
+    padding: 0;
+    width: 90%;
+}
+/*FOOTER*/
+footer{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/*<input id="stretch" type="text" placeholder="Insira um trecho da musica">*/
