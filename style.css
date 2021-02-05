@@ -3,7 +3,8 @@ body{
     background: url("./backgorund/background.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 115%;
+    background-attachment: fixed;
+    background-size: 100%;
 }
 
 /*HEADER*/
@@ -41,7 +42,7 @@ a{
     margin-left: 15%;
 }
 
-button{
+button, .button.cancel{
     margin-top: 1.5rem;
 
     font-size: 1.5rem;
@@ -51,6 +52,7 @@ button{
 }
 
 .button.cancel{
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +87,7 @@ button{
     text-align: center;
 }
 
-.card{
+#musics div{
     background: lightgrey;
     border-radius: 5px;
 
@@ -101,29 +103,29 @@ button{
     text-align: center;
 }
 
-.card .music_title , p{
+#musics div, .song_title , p{
     text-align: center;
 }
 
-.card .music_title{
+#musics div .song_title{
     margin-bottom: 5px;
     margin-top: 5px;
 }
 
-.card .subtitle{
+#musics div .lyrics{
     width: 250px;
     height: 250px;
     overflow: hidden;
 }
 
-.card p{
+#musics div p{
     margin-top: 0;
     font-size: 95%;
     
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.card img{
+#musics .image_description{
     width: 85%;
     height: 40%;
 }

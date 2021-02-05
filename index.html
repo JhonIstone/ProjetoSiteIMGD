@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,69 +21,6 @@
     <main>
         <a href="#" onclick="Modal.open()" class="button new">+Adicionar Musica</a>
         <section id="musics">
-            <div class="card">
-                <img src="./images/badliar.jpg" class="image">
-                <h3 class="music_title">Bad Liar</h3>
-                <p class="subtitle">
-                    So look me in the eyes <br>
-                    Tell me what you see <br>
-                    Perfect paradise <br>
-                    Tearing at the seams <br>
-                    I wish I could escape it <br>
-                    I don't want to fake it <br>
-                    I wish I could erase it <br>
-                    Make your heart believe <br>
-                    
-                    But I'm a bad liar <br>
-                    Bad liar <br>
-                    Now you know <br>
-                    Now you know <br>
-                    I'm a bad liar <br>
-                    Bad liar <br>
-                    Now you know <br>
-                    You're free to go <br>
-                </p>
-            </div>
-            <div class="card">
-                <img src="./images/next_to_me.jpg" class="image">
-                <h3 class="music_title">Next To Me</h3>
-                <p class="subtitle">
-                    Stress lines and cigarettes <br>
-                    Politics and deficits <br>
-                    Late bills and overages <br>
-                    Screamin' and hollerin' <br>
-                    But still you, still you want me <br>
-
-                    Oh, I always let you down <br>
-                    You're shattered on the ground <br>
-                    But still I find you there <br>
-                    Next to me <br>
-                    And oh, stupid things I do <br>
-                    I'm far from good, it's true <br>
-                    But still I find you <br>
-                    Next to me <br>
-                </p>
-            </div>
-            <div class="card">
-                <img src="./images/demons.jpg" class="image">
-                <h3 class="music_title">Demons</h3>
-                <p class="subtitle">
-                    Quando os dias estão frios <br> <br>
-                    E as cartas já foram lançadas <br>
-                    E os santos que vemos <br>
-                    São todos feitos de ouro <br>
-                    <br>
-                    Quando todos os seus sonhos fracassam <br>
-                    E aqueles que aclamamos <br>
-                    São os piores de todos <br>
-                    E o sangue para de correr <br>
-                    <br>
-                    Eu quero esconder a verdade <br>
-                    Eu quero proteger você <br>
-                    Mas com a fera dentro <br>
-                    Não há onde nos escondermos <br>
-                </p>
-            </div>
         </section>
     </main>
 
@@ -94,44 +31,30 @@
                 <form action="">
                     <div class="input-group">
                         <label class="box-hidden" for="name">Titulo da Musica </label>
-                        <input id="name" type="text" name="name" placeholder="Insira o nome da musica">
+                        <input id="song_title" type="text" name="song_title" placeholder="Insira o nome da musica">
                     </div>
                     <div class="input-group">
-                        <label class="box-hidden" for="stretch">Trecho da Musica</label>
-                        <textarea name="stretch" id="stretch" cols="30" rows="15"></textarea>
+                        <label class="box-hidden" for="lyrics">Trecho da Musica</label>
+                        <input type="text" id="lyrics" name="lyrics" placeholder="Trecho da musica">
                     </div>
                     <div class="input-group">
-                        <label class="box-hidden" for="image-description">Imagem Relacionado a musica</label>
-                        <input id="image-description" type="url" placeholder="Insira a URL da imagem base">
+                        <label class="box-hidden" for="image_description">Imagem Relacionado a musica</label>
+                        <input id="image_description" type="url" placeholder="Insira a URL da imagem">
                     </div>
                     <div>
-                        <button class="button cancel" onclick="Modal.close()">Cancelar</button>
-                        <button class="button submit" onclick="">Adicionar</button>
+                        <a href="#" class="button cancel" onclick="Modal.close()">Cancelar</a>
+                        <button class="button submit" type="submit" onclick="DOM_Musics.getValues()">Adicionar</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <script>
-        const Modal = {
-            open(){
-                document
-                .querySelector('.modal-overlay')
-                .classList
-                .add('active')
-            },
-            close(){
-                document
-                .querySelector('.modal-overlay')
-                .classList
-                .remove('active')
-            }
-        }
-    </script>
-
     <footer>
-        <p> <h4> Site Feito Por João Pedro <a href="http://www.instagram.com/Jhon_istone">@Jhon_istone</a> </h4> </p>
+        <p><h4>Site Feito Por João Pedro <a href="http://www.instagram.com/Jhon_istone">@Jhon_istone</a></h4></p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
+
