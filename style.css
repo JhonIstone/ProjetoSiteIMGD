@@ -43,7 +43,7 @@ a{
 }
 
 button, .button.cancel{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 
     font-size: 1.5rem;
 
@@ -155,7 +155,7 @@ button, .button.cancel{
 
 .modal{
     background-color: #DCDCDC;
-    padding: 2.4rem;
+    padding: 1rem;
     
     width: 500px;
     height: 400px;
@@ -164,26 +164,30 @@ button, .button.cancel{
 
     position: relative;
     z-index: 1;
+
+    text-align: center;
 }
 
+/*FORM E INPUT*/
 .form h2{
     margin-top: 0;
+    margin-bottom: 0.4rem;
 
     text-align: center;
 
     font-size: 2rem;
 }
 
-.form label{
-    text-align: left;
+form label{
+    font-size: 1.2rem;
 }
 
 input{
     border: 1px solid;
-    border-radius: 0.2rem;
+    border-radius: 0.1rem;
 
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.7rem;
 
     padding: 0.8rem;
 
@@ -192,17 +196,15 @@ input{
 
 textarea{
     border: 1px solid;
-    border-radius: 0.2rem;
 
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
     margin-bottom: 1rem;
 
-    width: 500px;
-    height: 50px;
+    height: 80px;
 
-    padding: 0;
-    width: 90%;
+    width: 94%;
 }
+
 /*FOOTER*/
 footer{
     margin-top: 3rem;

@@ -50,7 +50,7 @@ DOM = {
     
     innerHTMLMusics(music, index){
 
-        const html = 
+        const html =
             `
                 <img src="${music.image_description}" alt="Imagem Relacioada a Musica" class="image_description">
                 <h3 class="song_title" alt="Titulo da musica"> ${music.song_title} </h3>
@@ -60,5 +60,3 @@ DOM = {
     }
 
 }
-
-DOM.addMusic(musics[0])
