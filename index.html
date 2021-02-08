@@ -28,7 +28,7 @@
         <div class="modal">
             <div class="form">
                 <h2>ADICIONAR MUSICA</h2>
-                <form action="" onsubmit="DOM.addMusic()">
+                <form action="" onsubmit="Form.submit(event)">
                     <div>
                         <label class="box-hidden" for="name">Titulo da Musica </label>
                         <input id="song_title" type="text" name="song_title" placeholder="Insira o nome da musica">
@@ -39,7 +39,7 @@
                     </div>
                     <div>
                         <label class="box-hidden" for="image_description">Imagem Relacionado a musica</label>
-                        <input id="image_description" name="image_description"type="text" placeholder="Insira a URL da imagem">
+                        <input id="image_description" name="image_description" type="txt" placeholder="Insira a URL da imagem">
                     </div>
                     <div>
                         <a href="#" class="button cancel" onclick="Modal.close()">Cancelar</a>
