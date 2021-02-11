@@ -91,7 +91,6 @@ button, .button.cancel{
     background: lightgrey;
     border-radius: 5px;
 
-    padding: 1rem;
     margin: 10px 5px 10px 5px;
 
     width: 250px;
@@ -99,8 +98,6 @@ button, .button.cancel{
 
     display: inline-block;
     vertical-align: top;
-
-    text-align: center;
 }
 
 #musics div, .song_title , p{
@@ -123,6 +120,18 @@ button, .button.cancel{
     font-size: 95%;
     
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+#image_excluir{
+
+    margin-left: 210px;
+
+    width: 30px;
+    height: 30px;
+}
+
+#image_excluir:hover{
+    cursor: pointer;
 }
 
 /*MODAL*/
@@ -163,6 +172,14 @@ button, .button.cancel{
     text-align: center;
 }
 
+.modal h2, button, a, input{
+    align-items: center;
+}
+
+.modal label{
+    text-align: left;
+}
+
 /*FORM E INPUT*/
 .form h2{
     margin-top: 0;
@@ -192,11 +209,9 @@ input{
 textarea{
     border: 1px solid;
 
-    margin-top: 0.3rem;
-    margin-bottom: 0.3rem;
+    margin-top: 0.1rem;
 
     height: 80px;
-
     width: 94%;
 }
 
@@ -211,5 +226,3 @@ footer{
     margin-top: 3rem;
     text-align: center;
 }
-
-/*<input id="stretch" type="text" placeholder="Insira um trecho da musica">*/

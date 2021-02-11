@@ -13,22 +13,43 @@ const Modal = {
     }
 },
 
-musics = [
-    {
+/*musics = [
+    /
         id: 1,
         image_description: "https://i.pinimg.com/originals/0a/fa/62/0afa628528a62ebc8b594ff0c40bda68.jpg",
         song_title: "Bad Liar",
         lyric: "So look me in the eyes \n Tell me what you see \n Perfect paradise \n Tearing at the seams \n I wish \n I could escape \n I  don't wanna fake it \n Wish I could erase it \n Make your heart believe \n But I'm a \n bad liar, bad liar \n Now you know \n Now you know \n I'm a bad liar, bad liar \n Now you know, you're \n to go (go)"
+    },
+    {
+        id: 2,
+        image_description: "https://i.pinimg.com/originals/0a/fa/62/0afa628528a62ebc8b594ff0c40bda68.jpg",
+        song_title: "Bad Liar",
+        lyric: "So look me in the eyes \n Tell me what you see \n Perfect paradise \n Tearing at the seams \n I wish \n I could escape \n I  don't wanna fake it \n Wish I could erase it \n Make your heart believe \n But I'm a \n bad liar, bad liar \n Now you know \n Now you know \n I'm a bad liar, bad liar \n Now you know, you're \n to go (go)"
     }
-],
+],*/
+
+Storage = {
+    get() {
+        return JSON.parse(localStorage.getItem("imagineDragons:musics")) || []
+    },
+
+    set(musics) {
+        localStorage.setItem("imagineDragons:musics",
+            JSON.stringify(musics))
+    }
+}
 
 Music = {
-
-    allMusics: musics,
+                
+    allMusics: Storage.get(),
 
     add(music){
         Music.allMusics.push(music)
-        console.log(music)
+        App.reload()
+    },
+
+    remove(index){
+        Music.allMusics.splice(index, 1)
         App.reload()
     }
 },
@@ -45,15 +66,27 @@ DOM = {
     
     innerHTMLMusics(music, index){
 
+        lyric = Utils.formatTxt(music.lyric)
+
         const html =
             `
-                <img src="${music.image_description}" alt="Imagem Relacioada a Musica" class="image_description">
-                <h3 class="song_title" alt="Titulo da musica"> ${music.song_title} </h3>
-                <p class="lyrics" alt="Parte da letra da musica"> ${music.lyric} </p>
+            <img onclick="Music.remove(${index})" src="assets/excluir.png" alt="Excluir Musica" id="image_excluir">
+            <img src="${music.image_description}" alt="Imagem Relacioada a Musica" class="image_description">
+            <h3 class="song_title" alt="Titulo da musica"> ${music.song_title} </h3>
+            <p class="lyrics" alt="Parte da letra da musica"> ${lyric} </p>
             `
         return html
     },
 
+    clearMusic(){
+        DOM.containerMusic.innerHTML = ""
+    }
+},
+
+Utils = {
+    formatTxt(lyric){
+        return lyric.replaceAll("/", "<br>")
+    }
 },
 
 Form = {
@@ -102,8 +135,10 @@ Form = {
 App = {
     init(){
         Music.allMusics.forEach(DOM.addMusic)
+        Storage.set(Music.allMusics)
     },
     reload(){
+        DOM.clearMusic()
         App.init()
     }
 }
