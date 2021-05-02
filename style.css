@@ -111,8 +111,8 @@ button, .button.cancel{
 
 #musics div .lyrics{
     width: 250px;
-    height: 250px;
-    overflow: hidden;
+    max-height: 220px;
+    overflow: scroll;
 }
 
 #musics div p{
